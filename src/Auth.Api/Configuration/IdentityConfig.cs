@@ -28,6 +28,11 @@ public static class IdentityConfig
         var appSettings = appSettingsSection.Get<AppSettings>();
         var key = Encoding.ASCII.GetBytes(appSettings.Secret);
 
+        Console.WriteLine("=========================================");
+        Console.WriteLine(appSettings.Secret);
+        Console.WriteLine("=========================================");
+
+
         services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

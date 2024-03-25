@@ -8,12 +8,12 @@ builder.Services.AddSwaggerConfiguration();
 
 builder.Services.AddIdentityConfiguration(builder.Configuration);
 
+Console.WriteLine(app.Environment.EnvironmentName);
+
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwaggerConfiguration();
-}
+app.UseSwaggerConfiguration();
+
 
 app.UseHttpsRedirection();
 
