@@ -7,7 +7,7 @@ on:
     - main
 
 env:
-  AZURE_WEBAPP_NAME: FiapHackatonAuth
+  AZURE_WEBAPP_NAME: fiap-hackaton-auth
   AZURE_WEBAPP_PACKAGE_PATH: "./publish"
 
 jobs:
