@@ -8,9 +8,10 @@ builder.Services.AddSwaggerConfiguration();
 
 builder.Services.AddIdentityConfiguration(builder.Configuration);
 
+var app = builder.Build();
+
 Console.WriteLine(app.Environment.EnvironmentName);
 
-var app = builder.Build();
 
 app.UseSwaggerConfiguration();
 
